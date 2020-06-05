@@ -25,8 +25,10 @@ router = routers.DefaultRouter()
 
 
 from rbac.router import rbacRouter
+from book.router import bookRouter
 
 router.registry.extend(rbacRouter.registry)
+router.registry.extend(bookRouter.registry)
 
 urlpatterns = [
     path('', admin.site.urls),

@@ -18,7 +18,10 @@ class userAuthSerializer(serializers.Serializer):
                                     })
 
 
+
+
+
 class UserInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.UserProfile
-        fields = '__all__'
+        fields = ['id', 'username', 'email', 'is_active', 'date_joined', 'mobile', 'avatar', 'name', 'position', 'roles', 'user_permissions']

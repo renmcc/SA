@@ -1,26 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group
 from datetime import datetime
-
+import time
 
 # Create your models here.
-
-
-class UserProfile(AbstractUser):
-    """用户"""
-    name = models.CharField(max_length=20, default="", verbose_name="姓名")
-    mobile = models.CharField(max_length=11, default="", verbose_name="手机号码")
-    image = models.ImageField(upload_to="static/%Y/%m", default="image/default.png",
-                              max_length=100, null=True, blank=True)
-    position = models.CharField(max_length=50, null=True, blank=True, verbose_name="职位")
-
-    class Meta:
-        verbose_name = "用户信息"
-        verbose_name_plural = verbose_name
-        ordering = ['id']
-
-    def __str__(self):
-        return self.username
 
 
 class GroupProfile(Group):
@@ -30,3 +13,33 @@ class GroupProfile(Group):
     class Meta:
         verbose_name = '用户组'
         verbose_name_plural = verbose_name
+
+
+class UserProfile(AbstractUser):
+    """用户"""
+    name = models.CharField(max_length=20, default="", verbose_name="姓名")
+    mobile = models.CharField(max_length=11, default="", verbose_name="手机号码")
+    avatar = models.ImageField(upload_to="static/%Y/%m", default="image/default.png",
+                              max_length=100, null=True, blank=True)
+    position = models.CharField(max_length=50, null=True, blank=True, verbose_name="职位")
+
+    class Meta:
+        verbose_name = "用户信息"
+        verbose_name_plural = verbose_name
+        ordering = ['id']
+
+    @property
+    def roles(self):
+        roles = GroupProfile.objects.filter(user=self).values('name')
+        return [x.get('name') for x in roles if roles]
+
+    @property
+    def permissions(self):
+        groups_permissions = GroupProfile.objects.filter(user=self)
+        print([x.permissions.all() for x in groups_permissions])
+        return 1111
+
+    def __str__(self):
+        return self.username
+
+

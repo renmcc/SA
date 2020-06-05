@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_filters',
     'import_export',
     'rbac.apps.RbacConfig',
+    'book.apps.BookConfig'
 ]
 
 MIDDLEWARE = [
@@ -160,13 +161,31 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication'
     ),
+    # 分页
+    "DEFAULT_PAGINATION_CLASS": "utils.pagination.DefaultPagination",
+    # 搜索
+    'DEFAULT_FILTER_BACKENDS': (
+        # 字段过滤
+        'django_filters.rest_framework.DjangoFilterBackend',
+        # 搜索
+        'rest_framework.filters.SearchFilter',
+        # 排序
+        'rest_framework.filters.OrderingFilter',
+    ),
 
 }
 
 
 JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=3),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
+    # 'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=5),
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
+}
+
+
+# 缓存过期时间
+REST_FRAMEWORK_EXTENSIONS = {
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 5
 }
 
 
@@ -204,7 +223,7 @@ SIMPLEUI_ANALYSIS = False
 SIMPLEUI_CONFIG = {
     # 在自定义菜单的基础上保留系统模块
     'system_keep': True,
-    'menu_display':  ['项目管理', '服务器管理', '认证令牌', 'API', '测试', '用户管理'],
+    'menu_display':  ['图书管理', '用户管理'],
     'menus': [
         {
             'name': 'API',

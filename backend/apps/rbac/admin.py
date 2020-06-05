@@ -13,7 +13,7 @@ admin.site.site_header = 'SA运维管理后台'
 
 @admin.register(models.UserProfile)
 class UserProfileAdmin(UserAdmin):
-    list_display =  ['id', 'username', 'name', 'mobile', 'email', 'image', 'position', 'is_staff', 'is_active',  'date_joined']
+    list_display =  ['id', 'username', 'name', 'mobile', 'email', 'avatar', 'position', 'is_staff', 'is_active',  'date_joined']
     # 排序方式 -为倒序
     ordering = ['id']
     # 为数据列表页的字段id和job设置路由地址，该路由地址可进入数据修改页
@@ -31,7 +31,7 @@ class UserProfileAdmin(UserAdmin):
 
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
-        (_('Personal info'), {'fields': ('name', 'image', 'mobile', 'email', 'position',)}),
+        (_('Personal info'), {'fields': ('name', 'avatar', 'mobile', 'email', 'position',)}),
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
         }),

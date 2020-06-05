@@ -10,8 +10,11 @@ from rest_framework import status
 from rest_framework import mixins, viewsets
 from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handler, jwt_decode_handler, jwt_get_username_from_payload
 from utils.basic import SaResponse, SaViewSet
+from rest_framework_extensions.cache.mixins import CacheResponseMixin
+from rest_framework.response import Response
 from . import serializers
 from . import models
+import time
 
 
 class UserAuthView(SaViewSet):
@@ -36,10 +39,12 @@ class UserAuthView(SaViewSet):
             return SaResponse('用户认证失败', status=status.HTTP_400_BAD_REQUEST)
 
 
-class UserInfoView(mixins.ListModelMixin, viewsets.GenericViewSet):
+class UserInfoView(CacheResponseMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
     """
-    获取当前用户信息和权限
+    获取登录用户信息和权限
     """
+    # pagination_class = None
+
     serializer_class = serializers.UserInfoSerializer
 
     def get_queryset(self):
