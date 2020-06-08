@@ -39,13 +39,30 @@ class UserAuthView(SaViewSet):
             return SaResponse('用户认证失败', status=status.HTTP_400_BAD_REQUEST)
 
 
-class UserInfoView(CacheResponseMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
+class UserInfoView(CacheResponseMixin, viewsets.ModelViewSet):
     """
-    获取登录用户信息和权限
+    用户信息接口
     """
-    # pagination_class = None
-
+    queryset = models.UserProfile.objects.all()
     serializer_class = serializers.UserInfoSerializer
+    lookup_field = 'username'
 
-    def get_queryset(self):
-        return models.UserProfile.objects.filter(username=self.request.user)
+
+class ChangePasswordView(SaViewSet):
+    """
+    修改用户密码接口
+    """
+    serializer_class = serializers.ChangePasswordSerializer
+    lookup_field = 'username'
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+
+        serializer.is_valid(raise_exception=True)
+        old_password = serializer.initial_data.get('old_password')
+        new_password = serializer.initial_data.get('new_password1')
+        if not request.user.check_password(old_password):
+            return SaResponse({"password_error": '旧密码输入错误'}, status=status.HTTP_402_PAYMENT_REQUIRED)
+        request.user.set_password(new_password)
+        request.user.save()
+        return SaResponse({'change_password': '密码修改成功'}, status=status.HTTP_200_OK)
