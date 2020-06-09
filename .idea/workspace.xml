@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ba865e-d8f8-4500-92fc-4119f937c4eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/media/books/石大远程在线考试软件工程课程设计_21701568615579278_GRkouuJ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/media/static/2020/06/2a1818f861ce4da853a3321616e343bd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/media/static/2020/06/2a1818f861ce4da853a3321616e343bd_mlIRp87.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/media/static/2020/06/2a1818f861ce4da853a3321616e343bd_rG0wN6Z.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/apps/rbac/filter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/rbac/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/rbac/router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/rbac/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/rbac/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/apps/rbac/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/rbac/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,6 +18,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="225" column="27" selection-start-line="225" selection-start-column="27" selection-end-line="225" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/apps/rbac/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="474">
@@ -32,10 +36,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/apps/rbac/filter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/apps/rbac/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="396">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -99,6 +112,7 @@
         <option value="$PROJECT_DIR$/backend/apps/rbac/router.py" />
         <option value="$PROJECT_DIR$/backend/apps/rbac/serializers.py" />
         <option value="$PROJECT_DIR$/backend/apps/rbac/views.py" />
+        <option value="$PROJECT_DIR$/backend/apps/rbac/filter.py" />
       </list>
     </option>
   </component>
@@ -217,7 +231,7 @@
       <workItem from="1591027075073" duration="41020000" />
       <workItem from="1591150254002" duration="11426000" />
       <workItem from="1591169047951" duration="1509000" />
-      <workItem from="1591204761962" duration="39778000" />
+      <workItem from="1591204761962" duration="47533000" />
     </task>
     <task id="LOCAL-00001" summary="login认证接口">
       <created>1591150426746</created>
@@ -233,11 +247,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591379680270</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="个人中心对接">
+      <created>1591617129105</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591617129105</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93733000" />
+    <option name="totallyTimeSpent" value="101488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-188" width="1936" height="1096" extended-state="6" />
@@ -248,7 +269,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290735" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3088392" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.14802982" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.31948882" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -296,7 +317,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login认证接口" />
     <MESSAGE value="book上传接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="book上传接口" />
+    <MESSAGE value="个人中心对接" />
+    <option name="LAST_COMMIT_MESSAGE" value="个人中心对接" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -436,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/backend/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -482,13 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="225" column="27" selection-start-line="225" selection-start-column="27" selection-end-line="225" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -562,6 +570,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="225" column="27" selection-start-line="225" selection-start-column="27" selection-end-line="225" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django_filters/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/apps/rbac/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
@@ -569,10 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/views.py">
+    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/filter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="176">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

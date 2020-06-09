@@ -14,6 +14,7 @@ from rest_framework_extensions.cache.mixins import CacheResponseMixin
 from rest_framework.response import Response
 from . import serializers
 from . import models
+from . import filter
 import time
 
 
@@ -45,6 +46,8 @@ class UserInfoView(CacheResponseMixin, viewsets.ModelViewSet):
     """
     queryset = models.UserProfile.objects.all()
     serializer_class = serializers.UserInfoSerializer
+    filter_class = filter.UserFilter
+    search_fields = ['name', 'username', 'mobile', 'position', 'is_active']
     lookup_field = 'username'
 
 
