@@ -4,7 +4,7 @@
 #__author__ = 'ren_mcc'
 
 import django_filters
-from .models import UserProfile
+from .models import UserProfile, GroupProfile
 from django.db.models import Q
 
 
@@ -16,3 +16,13 @@ class UserFilter(django_filters.rest_framework.FilterSet):
     class Meta:
         model = UserProfile
         fields = ["name", 'date_joined']
+
+
+class UserGroupFilter(django_filters.rest_framework.FilterSet):
+    '''用户组信息过滤'''
+    name = django_filters.CharFilter(field_name='name', help_text="用户组模糊查询", lookup_expr='icontains')
+    add_time = django_filters.DateTimeFromToRangeFilter(field_name='add_time', help_text="按创建时间过滤",)
+
+    class Meta:
+        model = GroupProfile
+        fields = ["name", 'add_time']

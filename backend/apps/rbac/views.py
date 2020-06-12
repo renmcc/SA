@@ -12,6 +12,7 @@ from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handl
 from utils.basic import SaResponse, SaViewSet
 from rest_framework_extensions.cache.mixins import CacheResponseMixin
 from rest_framework.response import Response
+from django.contrib.auth.models import Permission
 from . import serializers
 from . import models
 from . import filter
@@ -40,7 +41,7 @@ class UserAuthView(SaViewSet):
             return SaResponse('用户认证失败', status=status.HTTP_400_BAD_REQUEST)
 
 
-class UserInfoView(CacheResponseMixin, viewsets.ModelViewSet):
+class UserInfoView(viewsets.ModelViewSet):
     """
     用户信息接口
     """
@@ -69,3 +70,24 @@ class ChangePasswordView(SaViewSet):
         request.user.set_password(new_password)
         request.user.save()
         return SaResponse({'change_password': '密码修改成功'}, status=status.HTTP_200_OK)
+
+
+class UserGroupsView(viewsets.ModelViewSet):
+    """
+    用户组接口
+    """
+    queryset = models.GroupProfile.objects.all()
+    serializer_class = serializers.UserGroupsSerializer
+    filter_class = filter.UserGroupFilter
+    search_fields = ['name']
+    lookup_field = 'name'
+
+
+class PermissionsInfoView(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    查询所有权限接口
+    """
+    pagination_class = None
+    queryset = Permission.objects.all()
+    serializer_class = serializers.PermissionsInfoSerializer
+    search_fields = ['name']

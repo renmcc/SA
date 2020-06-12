@@ -14,6 +14,10 @@ class GroupProfile(Group):
         verbose_name = '用户组'
         verbose_name_plural = verbose_name
 
+    @property
+    def permissions2(self):
+        return self.permissions.all().values()
+
 
 class UserProfile(AbstractUser):
     """用户"""
