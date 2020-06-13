@@ -27,9 +27,6 @@ class UserInfoSerializer(serializers.ModelSerializer):
         model = models.UserProfile
         fields = [ 'id',  'username',  'name', 'password', 'email', 'is_active', 'date_joined', 'mobile', 'avatar', 'position', 'roles', 'user_permissions', 'groups']
         extra_kwargs = {
-            'username': {
-                'read_only': True
-            },
             'user_permissions': {
               'read_only': True
             },
@@ -44,11 +41,6 @@ class UserInfoSerializer(serializers.ModelSerializer):
                 'format': '%Y-%m-%d %H:%M:%S'
             }
         }
-
-    def validate_username(self, value):
-        if models.UserProfile.objects.filter(username=value):
-            raise serializers.ValidationError({"usernameError":"用户名已存在"})
-        return value
 
     def validate_password(self, value):
         if models.UserProfile.objects.filter(password=value):
@@ -91,11 +83,6 @@ class UserGroupsSerializer(serializers.ModelSerializer):
                 'format': '%Y-%m-%d %H:%M:%S'
             },
         }
-
-    def validate_name(self, value):
-        if models.GroupProfile.objects.filter(name=value):
-            raise serializers.ValidationError({"nameError":"用户组已存在"})
-        return value
 
 
 class PermissionsInfoSerializer(serializers.ModelSerializer):
