@@ -4,7 +4,7 @@
 __author__ = 'ren_mcc'
 
 from rest_framework import serializers
-from django.contrib.auth.hashers import check_password
+from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import Permission
 from . import models
 
@@ -27,6 +27,9 @@ class UserInfoSerializer(serializers.ModelSerializer):
         model = models.UserProfile
         fields = [ 'id',  'username',  'name', 'password', 'email', 'is_active', 'date_joined', 'mobile', 'avatar', 'position', 'roles', 'user_permissions', 'groups']
         extra_kwargs = {
+            'username': {
+                'read_only': True
+            },
             'user_permissions': {
               'read_only': True
             },
@@ -34,7 +37,6 @@ class UserInfoSerializer(serializers.ModelSerializer):
                 'read_only': True
             },
             'password': {
-                'write_only': True,
                 'style': {'input_type': 'password'}
             },
             'date_joined': {
@@ -47,6 +49,12 @@ class UserInfoSerializer(serializers.ModelSerializer):
         if models.UserProfile.objects.filter(username=value):
             raise serializers.ValidationError({"usernameError":"用户名已存在"})
         return value
+
+    def validate_password(self, value):
+        if models.UserProfile.objects.filter(password=value):
+            return value
+        else:
+            return make_password(value)
 
 
 class ChangePasswordSerializer(serializers.Serializer):

@@ -44,8 +44,10 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'django_filters',
     'import_export',
+    'django_celery_results',
+    'django_celery_beat',
     'rbac.apps.RbacConfig',
-    'book.apps.BookConfig'
+    'cmdb.apps.CmdbConfig'
 ]
 
 MIDDLEWARE = [
@@ -172,9 +174,32 @@ REST_FRAMEWORK = {
         # 排序
         'rest_framework.filters.OrderingFilter',
     ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        # ip白名单
+        'utils.permissions.BlacklistPermission',
+        # 必须得登录
+        'rest_framework.permissions.IsAuthenticated',
+        # 使用django的模型权限
+        # 'rest_framework.permissions.DjangoModelPermissions',
+        # 使用自定义权限
+        'utils.permissions.Permissions',
+    ),
+    # 全局渲染类配置
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+    # api访问速率
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '5/minute',
+        'user': '1/second'
+    }
 
 }
-
 
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
@@ -187,6 +212,27 @@ JWT_AUTH = {
 REST_FRAMEWORK_EXTENSIONS = {
     'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 5
 }
+
+# 使用REDIS做为消息队列
+CELERY_BROKER_URL = 'redis://192.168.10.10:6379/8'
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379/9'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+# celery worker并发数
+CELERYD_CONCURRENCY = 20
+
+# 非常重要,有些情况下可以防止死锁
+CELERYD_FORCE_EXECV = True
+
+# 每个worker最大执行任务数
+CELERYD_MAX_TASKS_PER_CHILD = 100
+
+CELERY_TIMEZONE = 'Asia/Shanghai'
+CELERY_ENABLE_UTC = False
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
 
 
@@ -223,7 +269,7 @@ SIMPLEUI_ANALYSIS = False
 SIMPLEUI_CONFIG = {
     # 在自定义菜单的基础上保留系统模块
     'system_keep': True,
-    'menu_display':  ['图书管理', '用户管理'],
+    # 'menu_display':  ['图书管理', 'API', '用户管理'],
     'menus': [
         {
             'name': 'API',

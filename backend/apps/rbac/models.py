@@ -47,3 +47,17 @@ class UserProfile(AbstractUser):
         return self.username
 
 
+class Blacklist(models.Model):
+    """ip白名单"""
+    ip_addr = models.GenericIPAddressField(verbose_name="白名单")
+    add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
+    update_time = models.DateTimeField(auto_now=True, help_text='更新时间', verbose_name='更新时间')
+
+    class Meta:
+        verbose_name = '权限白名单'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.ip_addr
+
+

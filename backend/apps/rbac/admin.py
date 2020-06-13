@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin, GroupAdmin
 from django.utils.translation import gettext_lazy as _
+from import_export.admin import ImportExportModelAdmin, ImportExportActionModelAdmin
 from . import models
 
 # Register your models here.
@@ -54,3 +55,20 @@ class GroupProfileAdmin(GroupAdmin):
     list_max_show_all = 200
     # 设置可搜索的字段
     search_fields = ['name']
+
+
+@admin.register(models.Blacklist)
+class BlacklistAdmin(ImportExportModelAdmin, ImportExportActionModelAdmin):
+    list_display =  ['id', 'ip_addr', 'add_time', 'update_time']
+    # 排序方式 -为倒序
+    ordering = ['id']
+    # 为数据列表页的字段id和job设置路由地址，该路由地址可进入数据修改页
+    list_display_links = ['id', 'ip_addr']
+    # 设置过滤器，若有外键，则应该使用双下划线连接两个模型的字段
+    list_filter = ['ip_addr']
+    # 在数据列表页设置每一页显示的数据
+    list_per_page = 50
+    # 数据列表页每一页显示最大数
+    list_max_show_all = 200
+    # 设置可搜索的字段
+    search_fields = ['ip_addr']

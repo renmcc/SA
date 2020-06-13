@@ -13,6 +13,7 @@ from utils.basic import SaResponse, SaViewSet
 from rest_framework_extensions.cache.mixins import CacheResponseMixin
 from rest_framework.response import Response
 from django.contrib.auth.models import Permission
+from rest_framework import permissions
 from . import serializers
 from . import models
 from . import filter
@@ -57,6 +58,7 @@ class ChangePasswordView(SaViewSet):
     修改用户密码接口
     """
     serializer_class = serializers.ChangePasswordSerializer
+    permission_classes = (permissions.IsAuthenticated,)
     lookup_field = 'username'
 
     def create(self, request, *args, **kwargs):
