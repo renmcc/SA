@@ -2,145 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ba865e-d8f8-4500-92fc-4119f937c4eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/apps/project/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/project/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/project/filter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/project/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/project/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/project/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/project/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/ansible.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/callback_plugins/redis2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/callback_plugins/timer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/hosts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/.test.yml.swp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/failed_when.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/redis_opt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/role_tasks.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/.ansible-lint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/.bumpversion.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/defaults/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/lookup_plugins/_django_eval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/meta/.galaxy_install_info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/meta/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/requirements.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tasks/update.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/ansible.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/cleanup.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/example.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/app/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/app/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/app/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/app/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/app/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/app/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/app/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/group_vars/centos6.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/group_vars/centos7.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/group_vars/containers.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/group_vars/ubuntu16.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/inventory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/lookup_plugins/_django_eval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/roles/requirements.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/setup.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/templates/local_settings.py.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/templates/manage.py.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/test_lookup.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/test_post_tasks.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/test_pre_tasks.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tox.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/mysql/tasks/debian.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/mysql/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/mysql/tasks/redhat.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/mysql/vars/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/nginx/defaults/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/nginx/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/nginx/tasks/install.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/nginx/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/defaults/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/meta/.galaxy_install_info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/meta/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/molecule/default/Dockerfile.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/molecule/default/molecule.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/molecule/default/playbook.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/molecule/default/tests/test_default.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/CHANGES.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/defaults/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/files/omero-web-config-gunicorn-config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/meta/.galaxy_install_info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/meta/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/molecule/default/Dockerfile.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/molecule/default/molecule.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/molecule/default/playbook.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/molecule/default/requirements.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/molecule/default/tests/test_default.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/templates/omero-web-config-django-prometheus-omero.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_web_django_prometheus/templates/systemd-system-omero-web-service-d-prometheus-conf.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/php/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/wordpress/defaults/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/wordpress/files/wp-config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/wordpress/files/wp.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/wordpress/meta/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/wordpress/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/setup.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/templates/nginx_vhost.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tools/playbooks/wordpress.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/project/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/migrations/0002_remove_uploadbook_book.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/migrations/0003_uploadbook_book.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tools/playbooks/roles/cchurch.django/tests/files/proj/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/router.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/project/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/book/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/rbac/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/rbac/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/rbac/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/rbac/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/rbac/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/rbac/router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/rbac/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/rbac/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/rbac/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/rbac/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/utils/ansibleApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/utils/ansibleApi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/utils/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/utils/permissions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/celery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/project/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/project/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/project/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/project/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/project/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/project/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+            <state relative-caret-position="506">
+              <caret line="38" selection-start-line="38" selection-end-line="38" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -181,10 +46,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/models.py">
+        <entry file="file://$PROJECT_DIR$/backend/apps/project/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            <state relative-caret-position="308">
+              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/apps/project/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -201,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/apps/project/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="239">
+              <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -221,15 +104,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="283">
               <caret line="107" selection-start-line="107" selection-end-line="116" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -303,9 +177,6 @@
         <option value="$PROJECT_DIR$/backend/tools/ansible.cfg" />
         <option value="$PROJECT_DIR$/backend/tools/callback_plugins/redis2.py" />
         <option value="$PROJECT_DIR$/backend/backend/urls.py" />
-        <option value="$PROJECT_DIR$/backend/apps/project/models.py" />
-        <option value="$PROJECT_DIR$/backend/apps/project/serializers.py" />
-        <option value="$PROJECT_DIR$/backend/apps/project/views.py" />
         <option value="$PROJECT_DIR$/backend/apps/project/router.py" />
         <option value="$PROJECT_DIR$/backend/apps/project/admin.py" />
         <option value="$PROJECT_DIR$/backend/apps/cmdb/serializers.py" />
@@ -314,6 +185,9 @@
         <option value="$PROJECT_DIR$/backend/backend/settings.py" />
         <option value="$PROJECT_DIR$/backend/apps/cmdb/filter.py" />
         <option value="$PROJECT_DIR$/backend/apps/cmdb/models.py" />
+        <option value="$PROJECT_DIR$/backend/apps/project/views.py" />
+        <option value="$PROJECT_DIR$/backend/apps/project/models.py" />
+        <option value="$PROJECT_DIR$/backend/apps/project/serializers.py" />
       </list>
     </option>
   </component>
@@ -468,7 +342,7 @@
       <workItem from="1591169047951" duration="1509000" />
       <workItem from="1591204761962" duration="62406000" />
       <workItem from="1591856221434" duration="25521000" />
-      <workItem from="1592060639421" duration="54144000" />
+      <workItem from="1592060639421" duration="58007000" />
     </task>
     <task id="LOCAL-00001" summary="login认证接口">
       <created>1591150426746</created>
@@ -519,11 +393,34 @@
       <option name="project" value="LOCAL" />
       <updated>1592069686836</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="服务器列表页完成">
+      <created>1592316749287</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592316749287</updated>
+    </task>
+    <task id="LOCAL-00009" summary="服务器列表页完成">
+      <created>1592316768052</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1592316768052</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196026000" />
+    <option name="totallyTimeSpent" value="199889000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-188" width="1936" height="1096" extended-state="6" />
@@ -535,10 +432,10 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290735" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3088392" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.29392973" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29392973" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3290735" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -590,7 +487,8 @@
     <MESSAGE value="用户中心-过滤器和搜索功能开发" />
     <MESSAGE value="角色管理功能页面完成" />
     <MESSAGE value="cmdb功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="cmdb功能" />
+    <MESSAGE value="服务器列表页完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="服务器列表页完成" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -601,13 +499,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django_filters/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-918">
@@ -792,20 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="81" column="23" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/apps/project/router.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -824,13 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -869,24 +739,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1187">
           <caret line="204" column="12" lean-forward="true" selection-start-line="204" selection-start-column="12" selection-end-line="204" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -900,6 +756,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/molecule/default/molecule.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/filter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -907,10 +777,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/models.py">
+    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        <state relative-caret-position="484">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="38" selection-start-line="38" selection-end-line="38" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/project/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/project/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/project/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>

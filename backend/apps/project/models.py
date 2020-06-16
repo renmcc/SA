@@ -5,7 +5,7 @@ from datetime import datetime
 
 class ProjectArea(models.Model):
     name = models.CharField('项目大区', max_length=50, unique=True, help_text='项目大区', default='未分配')
-    remark = models.TextField("备注", null=True, help_text="备注")
+    remark = models.TextField("备注", null=True, blank=True, help_text="备注")
     created = models.DateTimeField(auto_now=True, help_text='创建时间', verbose_name="添加时间")
     update_time = models.DateTimeField(auto_now=True, help_text='更新时间', verbose_name='更新时间')
 
@@ -20,7 +20,7 @@ class ProjectArea(models.Model):
 
 class Project(models.Model):
     name = models.CharField('项目名称', max_length=50, unique=True, help_text="项目名称", default='未分配')
-    remark = models.TextField("备注", null=True, help_text="备注")
+    remark = models.TextField("备注", null=True, blank=True, help_text="备注")
     created = models.DateTimeField('创建时间', auto_now=True, help_text='创建时间')
     update_time = models.DateTimeField(auto_now=True, help_text='更新时间', verbose_name='更新时间')
 
@@ -35,7 +35,7 @@ class Project(models.Model):
 
 class ProjectRole(models.Model):
     name = models.CharField('项目角色', max_length=50, unique=True, help_text='项目角色', default='未分配')
-    remark = models.TextField("备注", null=True, help_text="备注")
+    remark = models.TextField("备注", null=True, blank=True, help_text="备注")
     created = models.DateTimeField('创建时间', auto_now=True, help_text='创建时间')
     update_time = models.DateTimeField(auto_now=True, help_text='更新时间', verbose_name='更新时间')
 

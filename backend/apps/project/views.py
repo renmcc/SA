@@ -28,7 +28,7 @@ class ProjectView(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
 
     filter_class = ProjectFilter
-    filter_fields = ("name", )
+    search_fields = ['name',]
 
 
 class ProjectRoleView(viewsets.ModelViewSet):
@@ -52,7 +52,7 @@ class ProjectRoleView(viewsets.ModelViewSet):
     serializer_class = ProjectRoleSerializer
 
     filter_class = ProjectRoleFilter
-    filter_fields = ("name", )
+    search_fields = ['name',]
 
 
 class ProjectAreaView(viewsets.ModelViewSet):
@@ -76,7 +76,7 @@ class ProjectAreaView(viewsets.ModelViewSet):
     serializer_class = ProjectAreaSerializer
 
     filter_class = ProjectAreaFilter
-    filter_fields = ("name", )
+    search_fields = ['name',]
 
 
 class ProjectRegionView(viewsets.ModelViewSet):
@@ -98,4 +98,4 @@ class ProjectRegionView(viewsets.ModelViewSet):
      """
     queryset = ProjectRegion.objects.all()
     serializer_class = ProjectRegionSerializer
-    filter_fields = ("name", )
+    search_fields = ['name',]
