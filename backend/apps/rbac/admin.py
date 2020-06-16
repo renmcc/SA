@@ -57,7 +57,7 @@ class GroupProfileAdmin(GroupAdmin):
     search_fields = ['name']
 
 
-@admin.register(models.Blacklist)
+@admin.register(models.IpWhiteList)
 class BlacklistAdmin(ImportExportModelAdmin, ImportExportActionModelAdmin):
     list_display =  ['id', 'ip_addr', 'add_time', 'update_time']
     # 排序方式 -为倒序

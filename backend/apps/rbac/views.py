@@ -93,3 +93,12 @@ class PermissionsInfoView(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Permission.objects.all()
     serializer_class = serializers.PermissionsInfoSerializer
     search_fields = ['name']
+
+
+class IpWhiteListView(viewsets.ModelViewSet):
+    """
+    IP白名单接口
+    """
+    queryset = models.IpWhiteList.objects.all()
+    serializer_class = serializers.IpWhiteListSerializer
+    search_fields = ['ip_addr']

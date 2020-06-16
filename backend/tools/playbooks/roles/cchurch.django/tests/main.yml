@@ -1,0 +1,15 @@
+---
+
+- name: setup docker containers
+  import_playbook: setup.yml
+  tags: [always, setup]
+
+- name: test custom lookup plugin
+  import_playbook: test_lookup.yml
+
+- name: run tests for role
+  import_playbook: test.yml
+
+- name: cleanup docker containers
+  import_playbook: cleanup.yml
+  tags: [always, cleanup]

@@ -1,0 +1,54 @@
+---
+# tasks file for omero-web-django-prometheus
+
+- name: omero-web django prometheus | install
+  become: true
+  pip:
+    name: django-prometheus
+    state: present
+    version: "{{ omero_web_django_prometheus_version }}"
+    virtualenv: "{{ omero_common_basedir }}/web/venv3"
+    virtualenv_site_packages: true
+  notify:
+    - restart omero-web
+
+- name: omero-web django prometheus | configure
+  become: true
+  template:
+    dest: "{{ omero_common_basedir }}/web/config/django-prometheus.omero"
+    src: omero-web-config-django-prometheus-omero.j2
+  notify:
+    - restart omero-web
+
+- name: omero-web django prometheus | configure gunicorn
+  become: true
+  copy:
+    dest: "{{ omero_common_basedir }}/web/config/gunicorn-config.py"
+    src: omero-web-config-gunicorn-config.py
+  notify:
+    - restart omero-web
+
+- name: omero-web django prometheus | service.d directory
+  become: true
+  file:
+    path: /etc/systemd/system/omero-web.service.d
+    state: directory
+
+- name: omero-web django prometheus | service.d file
+  become: true
+  template:
+    dest: /etc/systemd/system/omero-web.service.d/prometheus.conf
+    src: systemd-system-omero-web-service-d-prometheus-conf.j2
+  notify:
+    - reload systemd
+    - restart omero-web
+
+# systemd service should create this directory but this may be required
+# for other invocations of bin/omero including ExecStartPre
+- name: omero-web django prometheus | stats dir
+  become: true
+  file:
+    path: "{{ omero_web_django_prometheus_stats_dir }}"
+    recurse: true
+    state: directory
+    owner: "{{ omero_web_system_user | default('omero-web') }}"

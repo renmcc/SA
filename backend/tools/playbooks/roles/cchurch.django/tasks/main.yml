@@ -1,0 +1,28 @@
+---
+
+- name: determine current user
+  command: whoami
+  register: _django_whoami_result
+  changed_when: false
+
+- name: determine current user vs. actual user
+  set_fact:
+    _django_current_user: "{{ ansible_user | default(ansible_ssh_user, true) | default(ansible_user_id, true) | default(lookup('env', 'USER')) }}"
+    _django_actual_user: "{{ _django_whoami_result.stdout }}"
+
+- name: initialize default role variables
+  set_fact:
+    _django_app_path: "{{ django_app_path | mandatory }}"
+    _django_becoming: "{{ (_django_actual_user != _django_current_user or _django_actual_user == 'root') | bool }}"
+    _django_user: "{{ django_user | default(_django_current_user, true) }}"
+
+- name: run update tasks with become
+  import_tasks: update.yml
+  when: _django_user != _django_actual_user
+  become: true
+  become_user: "{{ _django_user }}"
+
+- name: run update tasks without become
+  import_tasks: update.yml
+  when: _django_user == _django_actual_user
+  become: false

@@ -88,7 +88,7 @@ class UserGroupsSerializer(serializers.ModelSerializer):
 class PermissionsInfoSerializer(serializers.ModelSerializer):
     label = serializers.SerializerMethodField()
     class Meta:
-        model = queryset = Permission
+        model = Permission
         fields = ['id', 'label']
 
     def get_label(selfself, obj):
@@ -97,3 +97,21 @@ class PermissionsInfoSerializer(serializers.ModelSerializer):
             obj.content_type,
             obj.name,
         )
+
+
+class IpWhiteListSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.IpWhiteList
+        fields = ['id', 'ip_addr', 'add_time', 'update_time']
+
+        extra_kwargs = {
+            'update_time': {
+                'read_only': True,
+                'format': '%Y-%m-%d %H:%M:%S'
+            },
+            'add_time': {
+                'read_only': True,
+                'format': '%Y-%m-%d %H:%M:%S'
+            },
+        }

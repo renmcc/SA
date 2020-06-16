@@ -1,0 +1,9 @@
+- hosts: localhost
+  become: yes
+  become_method: sudo
+  # 使用 roles 
+  roles:
+    - role: nginx
+      # 设置参数
+      vars:
+        init_nginx: True

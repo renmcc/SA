@@ -1,0 +1,17 @@
+# playbooks/templates/nginx_vhost.j2
+server  {
+        listen       {{ nginx_port }};    # 端口
+        access_log  logs/access.log;
+        error_log   logs/error.log;
+
+        location ^~ / {
+            proxy_pass {{ proxy_address }};        # 代理地址
+            proxy_redirect off;
+        }
+
+        location ~ .*\.(js|css)?$ {
+                expires      1h;
+        }
+        error_page 404 = /404.html;
+        error_page 500 502 503 504 = /500.html;
+}

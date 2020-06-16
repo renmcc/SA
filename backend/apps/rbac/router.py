@@ -8,5 +8,6 @@ rbacRouter.register(r'userInfo', views.UserInfoView, basename="userInfo")
 rbacRouter.register(r'changePassword', views.ChangePasswordView, basename="changePassword")
 rbacRouter.register(r'groupsInfo', views.UserGroupsView, basename="groupsInfo")
 rbacRouter.register(r'permissionsInfo', views.PermissionsInfoView, basename="permissionsInfo")
+rbacRouter.register(r'IpWhiteList', views.IpWhiteListView, basename="IpWhiteList")
 
 

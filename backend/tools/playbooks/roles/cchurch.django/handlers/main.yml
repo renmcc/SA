@@ -1,0 +1,6 @@
+---
+
+- name: django default handler
+  debug:
+    msg: "Updated Django project at {{ _django_app_path }}."
+  listen: django updated

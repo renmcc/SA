@@ -9,17 +9,20 @@ from django_celery_results.models import TaskResult
 
 class serverSerializer(serializers.ModelSerializer):
 
-    # 序列化最后一步
-    # def to_representation(self, instance):
-    #     ret = super(serverSerializer, self).to_representation(instance)
-    #     ret['area'] = {"id": instance.area.id, "name": instance.area.name}
-    #     ret['project'] = {"id": instance.project.id, "name": instance.project.name}
-    #     ret['role'] = {"id": instance.role.id, "name": instance.role.name}
-    #     return ret
-
     class Meta:
         model = server
-        fields = '__all__'
+        fields = ['id', 'region', 'regionInfo', 'project', 'projectInfo', 'area', 'areaInfo', 'role', 'roleInfo', 'hostname', 'public_ip', 'private_ip', 'os', 'cpu', 'memory', 'disk', 'status', 'remark', 'add_time', 'update_time']
+
+        extra_kwargs = {
+            'update_time': {
+                'read_only': True,
+                'format': '%Y-%m-%d %H:%M:%S'
+            },
+            'add_time': {
+                'read_only': True,
+                'format': '%Y-%m-%d %H:%M:%S'
+            },
+        }
 
 
 class celerytaskresultSerializer(serializers.ModelSerializer):
@@ -29,6 +32,6 @@ class celerytaskresultSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class flushcmdbSerializer(serializers.Serializer):
-    hosts = serializers.CharField(required=True, max_length=200, label='执行任务的hosts', help_text='执行任务的hosts')
+    host = serializers.CharField(required=True, max_length=200, label='执行任务的hosts', help_text='执行任务的hosts')
 
 

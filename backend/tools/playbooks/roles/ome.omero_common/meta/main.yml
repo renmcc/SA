@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  role_name: omero_common
+  author: ome-devel@lists.openmicroscopy.org.uk
+  description: Common variables and tasks for OMERO applications
+  company: Open Microscopy Environment
+  license: BSD
+  min_ansible_version: 2.2
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: Ubuntu
+      versions:
+        - bionic
+  galaxy_tags: []
+
+dependencies: []

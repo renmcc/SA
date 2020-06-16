@@ -1,0 +1,21 @@
+---
+# tasks for omero-common
+
+- name: omero-common | create parent directory
+  become: true
+  file:
+    path: "{{ omero_common_basedir }}"
+    recurse: true
+    state: directory
+
+# This lets us make handlers conditional on existence of the service
+- name: omero-common | check if services installed
+  stat:
+    path: "{{ item }}"
+  check_mode: false
+  register: _omero_common_services_installed
+  with_items:
+    # Order must match the indicies in handlers
+    - /etc/systemd/system/omero-server.service
+    - /etc/systemd/system/omero-web.service
+    - /usr/lib/systemd/system/nginx.service

@@ -1,0 +1,4 @@
+---
+# defaults for omero-common
+
+omero_common_basedir: /opt/omero

@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django_celery_results',
     'django_celery_beat',
     'rbac.apps.RbacConfig',
-    'cmdb.apps.CmdbConfig'
+    'cmdb.apps.CmdbConfig',
+    'project.apps.ProjectConfig'
 ]
 
 MIDDLEWARE = [
@@ -176,7 +177,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         # ip白名单
-        'utils.permissions.BlacklistPermission',
+        'utils.permissions.IpWhiteListPermission',
         # 必须得登录
         'rest_framework.permissions.IsAuthenticated',
         # 使用django的模型权限
@@ -196,7 +197,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_THROTTLE_RATES': {
         'anon': '5/minute',
-        'user': '2/second'
+        'user': '5/second'
     }
 
 }
@@ -213,28 +214,18 @@ REST_FRAMEWORK_EXTENSIONS = {
     'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 5
 }
 
-# 使用REDIS做为消息队列
-CELERY_BROKER_URL = 'redis://192.168.10.10:6379/8'
-# CELERY_RESULT_BACKEND = 'redis://localhost:6379/9'
-CELERY_RESULT_BACKEND = 'django-db'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-
-# celery worker并发数
-CELERYD_CONCURRENCY = 20
-
-# 非常重要,有些情况下可以防止死锁
-CELERYD_FORCE_EXECV = True
-
-# 每个worker最大执行任务数
-CELERYD_MAX_TASKS_PER_CHILD = 100
-
-CELERY_TIMEZONE = 'Asia/Shanghai'
-CELERY_ENABLE_UTC = False
-CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
-
-
+# # 使用REDIS做为消息队列
+# CELERY_BROKER_URL = 'redis://192.168.10.10:6379/8'
+# # CELERY_RESULT_BACKEND = 'redis://localhost:6379/9'
+# CELERY_RESULT_BACKEND = 'django-db'
+# # 结果序列化方案
+# CELERY_RESULT_SERIALIZER = 'json'
+#
+# # 非常重要,有些情况下可以防止死锁
+# CELERYD_FORCE_EXECV = True
+#
+# # 每个worker最大执行任务数
+# CELERYD_MAX_TASKS_PER_CHILD = 100
 
 # simpleui 设置
 # 首页配置

@@ -78,7 +78,7 @@ class ANSRunner(object):
 
     def __init__(self, *args, **kwargs):
         self.callback = ResultCallback()
-        self.resource = '/data/github/SA/tools/hosts'
+        self.resource = '/data/github/SA2/backend/tools/hosts'
         self.redisobj = redis.Redis(host='127.0.0.1', port=6379, password='', db=10)
         self.__initializeData()
 

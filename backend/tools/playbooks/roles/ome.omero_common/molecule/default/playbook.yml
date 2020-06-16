@@ -1,0 +1,33 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - role: ansible-role-omero-common
+
+  tasks:
+
+    - name: test reload systemd handler
+      file:
+        path: /tmp/notify-systemd-handler
+        state: directory
+      notify:
+        - reload systemd
+
+    # Should be a noop
+    - name: test restart handler without omero-server
+      file:
+        path: /tmp/notify-omero-server-handler
+        state: directory
+      notify:
+        - restart omero-server if installed
+
+  post_tasks:
+    - name: Check omero-common service variable
+      assert:
+        that:
+          # omero-server
+          - not _omero_common_services_installed.results.0.stat.exists
+          # omero-web
+          - not _omero_common_services_installed.results.1.stat.exists
+          # nginx
+          - not _omero_common_services_installed.results.2.stat.exists

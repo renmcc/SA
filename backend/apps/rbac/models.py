@@ -47,7 +47,7 @@ class UserProfile(AbstractUser):
         return self.username
 
 
-class Blacklist(models.Model):
+class IpWhiteList(models.Model):
     """ip白名单"""
     ip_addr = models.GenericIPAddressField(verbose_name="白名单")
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")

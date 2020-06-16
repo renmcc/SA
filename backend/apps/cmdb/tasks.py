@@ -20,3 +20,11 @@ def flushCMDB(hosts='all'):
     obj.runner(rediskey, hosts, tasks)
     return obj.get_result()
 
+@app.task
+def test():
+    res = []
+    for i in range(10):
+        res.append(i)
+        time.sleep(1)
+    return res
+

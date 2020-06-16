@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'bobby'
 from rest_framework import permissions
-from rbac.models import Blacklist
+from rbac.models import IpWhiteList
 
 
 class IsOwnerOrReadOnly(permissions.BasePermission):
@@ -20,14 +20,14 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
         return obj.user == request.user
 
 
-class BlacklistPermission(permissions.BasePermission):
+class IpWhiteListPermission(permissions.BasePermission):
     """
-    Global permission check for blacklisted IPs.
+    IP访问白名单
     """
 
     def has_permission(self, request, view):
         ip_addr = request.META['REMOTE_ADDR']
-        blacklisted = Blacklist.objects.filter(ip_addr=ip_addr).exists()
+        blacklisted = IpWhiteList.objects.filter(ip_addr=ip_addr).exists()
         return blacklisted
 
 

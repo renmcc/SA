@@ -26,9 +26,11 @@ router = routers.DefaultRouter()
 
 from rbac.router import rbacRouter
 from cmdb.router import cmdbRouter
+from project.router import projectRouter
 
 router.registry.extend(rbacRouter.registry)
 router.registry.extend(cmdbRouter.registry)
+router.registry.extend(projectRouter.registry)
 
 urlpatterns = [
     path('', admin.site.urls),

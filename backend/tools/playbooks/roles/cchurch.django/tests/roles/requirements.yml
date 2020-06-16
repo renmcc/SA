@@ -1,0 +1,5 @@
+---
+
+- src: cchurch.virtualenv
+- name: chrismeyersfsu.provision_docker
+  src: https://github.com/chrismeyersfsu/provision_docker

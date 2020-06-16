@@ -1,0 +1,4 @@
+packages:
+- mariadb
+- mariadb-server
+- MySQL-python

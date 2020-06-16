@@ -1,0 +1,30 @@
+# 安装启动 Redis 
+- hosts: localhost, 192.168.10.50
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:    
+    - name: 检测redis-server文件是否存在
+      file:
+        path: /usr/bin/redis-server
+        state: file
+      ignore_errors: True
+      register: redis_ser_file
+
+    - name: 安装redis
+      shell: yum -y install redis
+      when: redis_ser_file is failed
+
+    - name: Redis配置文件
+      copy:
+        dest: /tmp/redis.conf
+        content: "bind 127.0.0.1\ndaemonize yes\nport 6379"
+
+    - name: 检测 Redis 服务是否已启动
+      shell: /usr/bin/redis-cli quit
+      ignore_errors: True
+      register: redis_running
+
+    - name: 启动Redis服务，如果 redis 未启动
+      shell: redis-server /tmp/redis.conf
+      when: redis_running is failed

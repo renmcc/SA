@@ -1,0 +1,13 @@
+# 这里配置角色依赖，wordpress 需要 nginx php mysql 支持
+---
+dependencies:
+  - role: nginx
+    vars:
+      init_nginx: True
+  # 实验环境以安装 mysql，所以我们不执行安装操作
+  - role: mysql
+    vars:
+      init_mysql: True
+  - role: php
+    vars:
+      init_php: True

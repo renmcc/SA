@@ -1,0 +1,9 @@
+- name: Installed epel
+  yum:
+    name: epel-release
+    state: present
+
+- name: Installed Mariadb Server
+  yum: 
+    name: "{{ packages }}"
+    state: present

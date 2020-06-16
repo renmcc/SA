@@ -9,16 +9,14 @@ from django_celery_results.models import TaskResult
 from django.db.models import Q
 
 
-class ServerFilter(django_filters.FilterSet):
-    search_ip = django_filters.CharFilter(method="search_ip")
-
-    def search_ip(self, queryset, value):
-        # 通过Q实现多条件搜索
-        return queryset.filter(Q(public_ip__icontains=value)|Q(private_ip__icontains=value))
+class ServerFilter(django_filters.rest_framework.FilterSet):
+    '''server接口过滤'''
+    # regionInfo = django_filters.CharFilter(field_name='regionInfo', help_text="地区模糊查询", lookup_expr='icontains')
+    update_time = django_filters.DateTimeFromToRangeFilter(field_name='update_time', help_text="更新时间过滤",)
 
     class Meta:
         model = server
-        fields = ['public_ip', 'private_ip']
+        fields = ["region", 'project', 'area', 'update_time']
 
 
 class celerytaskresultFilter(django_filters.FilterSet):

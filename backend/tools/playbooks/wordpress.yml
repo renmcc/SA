@@ -1,0 +1,6 @@
+# 部署 wordpress 只需要引入 wordpress 一个 role 
+- hosts: localhost
+  become: yes
+  become_method: sudo 
+  roles:
+    - wordpress

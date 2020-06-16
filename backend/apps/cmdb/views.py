@@ -5,15 +5,18 @@
 
 from rest_framework import viewsets, mixins
 from rest_framework.response import Response
+from django_celery_results.models import TaskResult
+from utils.basic import SaViewSet, SaResponse
+from rest_framework import permissions, status
 from .models import server
 from .serializers import serverSerializer, celerytaskresultSerializer ,flushcmdbSerializer
 from .filter import ServerFilter, celerytaskresultFilter
-from .tasks import flushCMDB
-from django_celery_results.models import TaskResult
+from . import tasks
+
 # Create your views here.
 
 
-class ServerApiView(viewsets.ModelViewSet):
+class serverInfoView(viewsets.ModelViewSet):
     """
      list:
      返回server列表
@@ -33,10 +36,8 @@ class ServerApiView(viewsets.ModelViewSet):
     queryset = server.objects.all()
     serializer_class = serverSerializer
     filter_class = ServerFilter
-    filter_fields = ("private_ip", "public_ip", )
+    search_fields = ['private_ip', 'public_ip']
 
-
-from rest_framework.permissions import DjangoModelPermissions
 
 
 class celerytaskresultView(viewsets.ReadOnlyModelViewSet):
@@ -53,22 +54,22 @@ class celerytaskresultView(viewsets.ReadOnlyModelViewSet):
     filter_class = celerytaskresultFilter
 
 
-class flushcmdbView(viewsets.GenericViewSet):
+class flushcmdbView(SaViewSet):
     """
      create:
      创建server记录
      """
     serializer_class = flushcmdbSerializer
+    permission_classes = (permissions.IsAuthenticated,)
 
     def create(self, request):
-        res = request.data
-        celeryobj = flushCMDB.delay(res['hosts'])
-        print(celeryobj)
-        result = {
-            'task_id': celeryobj.task_id,
-            'status': celeryobj.status
-        }
-        return Response(result)
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        host = serializer.initial_data.get('host')
+        res = tasks.flushCMDB.delay(host)
+        return SaResponse(res.task_id, status=status.HTTP_200_OK)
+
+
 
 
 

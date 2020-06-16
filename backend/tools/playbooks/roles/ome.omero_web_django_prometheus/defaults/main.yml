@@ -1,0 +1,28 @@
+---
+# defaults file for omero-web-django-prometheus
+
+# Automatically set omero.web.* configuration properties
+omero_web_django_prometheus_config_web: true
+
+# Prometheus temporary statistics directory
+omero_web_django_prometheus_stats_dir: >-
+  {{ omero_common_basedir }}/web/prometheus/stats
+
+
+######################################################################
+# Expert users only!
+######################################################################
+
+# django-prometheus version
+omero_web_django_prometheus_version: 1.1.0
+
+# OMERO.web doesn't support appending to omero.web.wsgi_arg,
+# we can only override it
+omero_web_django_prometheus_wsgi_args: >-
+  --config file:{{ omero_common_basedir }}/web/config/gunicorn-config.py
+
+# omero.web.middleware index for PrometheusBeforeMiddleware
+omero_web_django_prometheus_middleware_before: 0
+
+# omero.web.middleware index for PrometheusAfterMiddleware
+omero_web_django_prometheus_middleware_after: 1000

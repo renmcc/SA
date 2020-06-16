@@ -1,0 +1,102 @@
+---
+
+- name: launch docker containers
+  hosts: containers
+  gather_facts: false
+  tasks:
+    - name: set flag whether to restart docker container
+      set_fact:
+        restart: "{{ provision_docker_restart | default(false) }}"
+    - import_role:
+        name: chrismeyersfsu.provision_docker
+      vars:
+        provision_docker_inventory_group:
+          - "{{ inventory_hostname }}"
+      delegate_to: localhost
+
+- name: install python 2.7 and 3.5 for centos6 container
+  hosts: containers:&centos6
+  gather_facts: false
+  tasks:
+    - name: install ius repo
+      shell: |
+        set -o pipefail
+        curl 'https://setup.ius.io/' | sh
+      args:
+        warn: false
+      register: _ius_install_result
+      changed_when: "'Nothing to do' not in _ius_install_result.stdout"
+    - name: install python 2.7 and 3.5 and pip
+      yum:
+        name:
+          - python-setuptools  # needed for pip module to work?
+          - python27
+          - python27-pip
+          - python35u
+          - python35u-pip
+
+- name: install epel and python36 on centos7 container
+  hosts: containers:&centos7
+  tasks:
+    - name: install epel
+      yum:
+        name: epel-release
+    - name: install pip and python3
+      yum:
+        name:
+          - python-pip
+          - python36
+          - python36-pip
+
+- name: install epel and python36 on centos8 container
+  hosts: containers:&centos8
+  tasks:
+    - name: install epel
+      package:
+        name: epel-release
+    - name: install python2 and python3 with pip
+      package:
+        name:
+          - python2
+          - python2-pip
+          - python3
+          - python3-pip
+
+- name: check and install python on ubuntu containers
+  hosts: containers:&ubuntu
+  gather_facts: false
+  tasks:
+    - name: check for and install python
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      register: _python_install_result
+      changed_when: _python_install_result.stdout
+    - name: refresh facts
+      setup:
+    - name: install pip and python3
+      apt:
+        name:
+          - python-pip
+          - python3
+          - python3-pip
+
+- name: install and configure sudo and rsync on containers
+  hosts: containers
+  tasks:
+    - name: install sudo and rsync
+      package:
+        name:
+          - sudo
+          - rsync
+    - name: enable sudo with no password
+      copy:
+        content: "%{{ (ansible_os_family == 'Debian') | ternary('sudo', 'wheel') }} ALL=(ALL) NOPASSWD: ALL"
+        dest: /etc/sudoers.d/sudo_nopasswd
+        mode: 0440
+        owner: root
+        group: root
+    - name: verify both python 2.7 and 3.x are present
+      command: "python{{ item }} -V"
+      changed_when: false
+      with_items:
+        - "{{ test_python2_version }}"
+        - "{{ test_python3_version }}"

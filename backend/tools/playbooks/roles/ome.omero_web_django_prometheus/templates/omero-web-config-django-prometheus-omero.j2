@@ -1,0 +1,10 @@
+{% if omero_web_django_prometheus_config_web %}
+config append -- omero.web.middleware '{"index":{{ omero_web_django_prometheus_middleware_before }}, "class": "django_prometheus.middleware.PrometheusBeforeMiddleware"}'
+config append -- omero.web.middleware '{"index":{{ omero_web_django_prometheus_middleware_after }}, "class": "django_prometheus.middleware.PrometheusAfterMiddleware"}'
+config append -- omero.web.apps '"django_prometheus"'
+
+{% if omero_web_django_prometheus_wsgi_args | length > 0 %}
+config set -- omero.web.wsgi_args {{ omero_web_django_prometheus_wsgi_args | quote }}
+{% endif %}
+
+{% endif %}

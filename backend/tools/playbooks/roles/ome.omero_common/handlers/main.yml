@@ -1,0 +1,50 @@
+---
+# Handlers for omero-common
+
+# The conditional means you can safely notify this on non-systemd servers
+- name: reload systemd
+  become: true
+  command: systemctl daemon-reload
+  when: ansible_service_mgr == 'systemd'
+  tags:
+    # [ANSIBLE0006] systemctl used in place of systemd module
+    - skip_ansible_lint
+
+- name: restart omero-server
+  become: true
+  service:
+    name: omero-server
+    state: restarted
+
+- name: restart omero-web
+  become: true
+  service:
+    name: omero-web
+    state: restarted
+
+- name: restart nginx
+  become: true
+  service:
+    name: nginx
+    state: restarted
+
+- name: restart omero-server if installed
+  become: true
+  service:
+    name: omero-server
+    state: restarted
+  when: _omero_common_services_installed.results.0.stat.exists
+
+- name: restart omero-web if installed
+  become: true
+  service:
+    name: omero-web
+    state: restarted
+  when: _omero_common_services_installed.results.1.stat.exists
+
+- name: restart nginx if installed
+  become: true
+  service:
+    name: nginx
+    state: restarted
+  when: _omero_common_services_installed.results.2.stat.exists

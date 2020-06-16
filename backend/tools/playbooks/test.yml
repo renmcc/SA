@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+    - name: ping
+      ping:
+    - name: "print any string"
+      debug: 
+        msg="{{ ansible_all_ipv4_addresses }}"
