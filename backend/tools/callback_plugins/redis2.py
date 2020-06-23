@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/opt/pyenv/versions/SA2/bin/python
 #coding:utf-8
 #__time__: 2020/4/2 13:31
 #__author__ = 'ren_mcc'
@@ -9,7 +9,7 @@ from ansible.plugins.callback import CallbackBase
 REDIS_ADDR = '127.0.0.1'
 REDIS_PORT = 6379
 REDIS_PD = ''    # redis 密码，这里为空，
-ansible_result_redis_db = 10    # 存入 redis db10 中
+ansible_result_redis_db = 2    # 存入 redis db10 中
 
 class CallbackModule(CallbackBase):
     """
@@ -20,7 +20,7 @@ class CallbackModule(CallbackBase):
     CALLBACK_NAME = 'redis2'
     CALLBACK_NEEDS_WHITELIST = True
 
-    def __init__(self):        # 我们初始化时，先调用父类，再生成任务 ID， 新建 redis 连接
+    def __init__(self):
         super(CallbackModule, self).__init__()
         self.id = 'ansible_execs_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S")
         self.r = redis.Redis(host=REDIS_ADDR, port=REDIS_PORT, password=REDIS_PD, db=ansible_result_redis_db)

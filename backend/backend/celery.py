@@ -17,10 +17,6 @@ app.conf.enable_utc = False
 # 添加下面两行
 app.conf.task_send_sent_event = True
 app.conf.worker_send_task_events = True
-app.conf.broker_url = 'redis://192.168.10.10:6379/8'
-app.conf.result_backend = 'django-db'
-app.conf.result_serializer = 'json'
-app.conf.force_execv = True
 
 # 绑定配置文件
 app.config_from_object('django.conf:settings', namespace='CELERY')

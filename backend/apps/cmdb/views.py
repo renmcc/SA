@@ -3,8 +3,7 @@
 #__time__: 2020/4/11 15:36
 #__author__ = 'ren_mcc'
 
-from rest_framework import viewsets, mixins
-from rest_framework.response import Response
+from rest_framework import viewsets
 from django_celery_results.models import TaskResult
 from utils.basic import SaViewSet, SaResponse
 from rest_framework import permissions, status
@@ -68,6 +67,8 @@ class flushcmdbView(SaViewSet):
         host = serializer.initial_data.get('host')
         res = tasks.flushCMDB.delay(host)
         return SaResponse(res.task_id, status=status.HTTP_200_OK)
+
+
 
 
 

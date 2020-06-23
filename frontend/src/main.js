@@ -14,11 +14,21 @@ import App from './App'
 import store from './store'
 import router from './router'
 
+// 全量引入 bk-magic-vue
+import bkMagic from 'bk-magic-vue'
+import 'bk-magic-vue/dist/bk-magic-vue.min.css'
+Vue.use(bkMagic)
+
+// 引入语法展示
+import VueHighlightJS from 'vue-highlightjs'
+import 'highlight.js/styles/atom-one-dark.css'
+Vue.use(VueHighlightJS)
+
 import './icons' // icon
 import './permission' // permission control
 import './utils/error-log' // error log
 
-import * as filters from './filters' // global filters
+import * as filters from './filters' // global filter
 
 Vue.use(Element, {
   size: Cookies.get('size') || 'medium' // set element-ui default size

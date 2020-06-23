@@ -2,10 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ba865e-d8f8-4500-92fc-4119f937c4eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/apps/tasks/consumers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/apps/tasks/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/apps/tasks/routing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/apps/tasks/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/apps/tasks/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/routing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/scripts/ansibleApiTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/scripts/testCelery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/scripts/testModels.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/api/updateServersDatetime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/tasks/updateServersDatetime.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/project/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/project/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/project/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/project/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/project/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/project/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/cmdb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/cmdb/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/utils/ansibleApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/utils/ansibleApi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tools/ansible.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tools/ansible.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tools/callback_plugins/redis2.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tools/callback_plugins/redis2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/serversList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/serversList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/layout/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layout/components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/cmdb/serverslist.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/cmdb/serverslist.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +47,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1187">
-              <caret line="204" column="12" lean-forward="true" selection-start-line="204" selection-start-column="12" selection-end-line="204" selection-end-column="12" />
+            <state relative-caret-position="374">
+              <caret line="17" column="8" selection-start-line="17" selection-end-line="17" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/tasks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -30,8 +65,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="38" selection-start-line="38" selection-end-line="38" selection-end-column="47" />
+            <state relative-caret-position="1144">
+              <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/apps/tasks/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/scripts/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/apps/tasks/consumers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/apps/tasks/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -39,71 +110,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/filter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/apps/project/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="440">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/apps/project/views.py">
+        <entry file="file://$PROJECT_DIR$/backend/apps/tasks/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+            <state relative-caret-position="350">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/serializers.py">
+        <entry file="file://$PROJECT_DIR$/backend/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/apps/rbac/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/apps/project/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/apps/rbac/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/apps/rbac/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="107" selection-start-line="107" selection-end-line="116" selection-end-column="9" />
+            <state relative-caret-position="506">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -119,14 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>six</find>
-      <find>filter_backends</find>
-      <find>api_settings</find>
-      <find>get_username_field</find>
-      <find>jwt_payload_handler</find>
-      <find>get_object</find>
-      <find>JSONWebTokenAuthentication</find>
-      <find>DEFAULT_PAGINATION_CLASS</find>
       <find>DEFAULT_PERMISSION_CLASSES</find>
       <find>username</find>
       <find>page</find>
@@ -139,7 +157,30 @@
       <find>interval</find>
       <find>celery</find>
       <find>ANSRunner</find>
+      <find>get_result</find>
+      <find>_store_result</find>
+      <find>redis</find>
+      <find>channel</find>
+      <find>TIME_ZONE</find>
+      <find>context_processors</find>
+      <find>django-db</find>
+      <find>_meta</find>
+      <find>_default_manager</find>
+      <find>store_result</find>
+      <find>TaskModel</find>
+      <find>TaskResult</find>
+      <find>time</find>
+      <find>specific.AvdbqFgB!rzoASSGlVkrC</find>
+      <find>server</find>
+      <find>MEDIA_ROOT</find>
+      <find>rest_framework</find>
+      <find>server_ip</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\admin\.PyCharm2019.1\system\remote_sources\-1455830296\1024456016\django_celery_beat</dir>
+      <dir>C:\Users\admin\.PyCharm2019.1\system\remote_sources\-1455830296\1024456016\django_celery_results</dir>
+      <dir>D:\github\SA2</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,47 +188,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/apps/rbac/signals.py" />
-        <option value="$PROJECT_DIR$/backend/apps/rbac/apps.py" />
-        <option value="$PROJECT_DIR$/backend/apps/rbac/urls.py" />
-        <option value="$PROJECT_DIR$/backend/apps/rbac/views/user.py" />
-        <option value="$PROJECT_DIR$/backend/apps/utils/basic.py" />
-        <option value="$PROJECT_DIR$/backend/apps/book/router.py" />
-        <option value="$PROJECT_DIR$/backend/apps/book/serializers.py" />
-        <option value="$PROJECT_DIR$/backend/apps/book/views.py" />
-        <option value="$PROJECT_DIR$/backend/apps/book/admin.py" />
-        <option value="$PROJECT_DIR$/backend/apps/book/apps.py" />
         <option value="$PROJECT_DIR$/backend/apps/book/models.py" />
         <option value="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/base_user.py" />
         <option value="$PROJECT_DIR$/backend/apps/utils/pagination.py" />
         <option value="$PROJECT_DIR$/backend/apps/rbac/filter.py" />
         <option value="$PROJECT_DIR$/backend/apps/cmdb/api_views.py" />
         <option value="$PROJECT_DIR$/backend/backend/__init__.py" />
-        <option value="$PROJECT_DIR$/backend/requirements.txt" />
         <option value="$PROJECT_DIR$/backend/apps/cmdb/router.py" />
-        <option value="$PROJECT_DIR$/backend/backend/celery.py" />
-        <option value="$PROJECT_DIR$/backend/apps/cmdb/tasks.py" />
         <option value="$PROJECT_DIR$/backend/apps/rbac/models.py" />
         <option value="$PROJECT_DIR$/backend/apps/rbac/admin.py" />
         <option value="$PROJECT_DIR$/backend/apps/rbac/router.py" />
         <option value="$PROJECT_DIR$/backend/apps/utils/permissions.py" />
         <option value="$PROJECT_DIR$/backend/apps/rbac/views.py" />
         <option value="$PROJECT_DIR$/backend/apps/rbac/serializers.py" />
-        <option value="$PROJECT_DIR$/backend/apps/utils/ansibleApi.py" />
-        <option value="$PROJECT_DIR$/backend/tools/ansible.cfg" />
-        <option value="$PROJECT_DIR$/backend/tools/callback_plugins/redis2.py" />
-        <option value="$PROJECT_DIR$/backend/backend/urls.py" />
         <option value="$PROJECT_DIR$/backend/apps/project/router.py" />
         <option value="$PROJECT_DIR$/backend/apps/project/admin.py" />
         <option value="$PROJECT_DIR$/backend/apps/cmdb/serializers.py" />
         <option value="$PROJECT_DIR$/backend/apps/cmdb/admin.py" />
-        <option value="$PROJECT_DIR$/backend/apps/cmdb/views.py" />
-        <option value="$PROJECT_DIR$/backend/backend/settings.py" />
-        <option value="$PROJECT_DIR$/backend/apps/cmdb/filter.py" />
-        <option value="$PROJECT_DIR$/backend/apps/cmdb/models.py" />
         <option value="$PROJECT_DIR$/backend/apps/project/views.py" />
         <option value="$PROJECT_DIR$/backend/apps/project/models.py" />
         <option value="$PROJECT_DIR$/backend/apps/project/serializers.py" />
+        <option value="$PROJECT_DIR$/backend/apps/cmdb/models.py" />
+        <option value="$PROJECT_DIR$/backend/backend/celery.py" />
+        <option value="$PROJECT_DIR$/backend/apps/cmdb/consumer.py" />
+        <option value="$PROJECT_DIR$/backend/tools/hosts" />
+        <option value="$PROJECT_DIR$/backend/scripts/add_user.py" />
+        <option value="$PROJECT_DIR$/backend/scripts/testModels.py" />
+        <option value="$PROJECT_DIR$/backend/scripts/testCelery.py" />
+        <option value="$PROJECT_DIR$/backend/apps/utils/ansibleApi.py" />
+        <option value="$PROJECT_DIR$/backend/apps/cmdb/routing.py" />
+        <option value="$PROJECT_DIR$/backend/apps/django_celery_results/backends/database.py" />
+        <option value="$PROJECT_DIR$/backend/apps/cmdb/consumers.py" />
+        <option value="$PROJECT_DIR$/backend/apps/cmdb/tasks.py" />
+        <option value="$PROJECT_DIR$/backend/backend/routing.py" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/router.py" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/apps.py" />
+        <option value="$PROJECT_DIR$/backend/apps/cmdb/filter.py" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/routing.py" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/consumers.py" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/admin.py" />
+        <option value="$PROJECT_DIR$/backend/backend/urls.py" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/models.py" />
+        <option value="$PROJECT_DIR$/backend/requirements.txt" />
+        <option value="$PROJECT_DIR$/backend/backend/settings.py" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/serializers.py" />
+        <option value="$PROJECT_DIR$/backend/scripts/test.py" />
+        <option value="$PROJECT_DIR$/backend/scripts/ansibleApiTest.py" />
+        <option value="$PROJECT_DIR$/backend/tools/callback_plugins/redis2.py" />
+        <option value="$PROJECT_DIR$/backend/tools/ansible.cfg" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/tasks.py" />
+        <option value="$PROJECT_DIR$/backend/apps/cmdb/views.py" />
+        <option value="$PROJECT_DIR$/backend/apps/tasks/views.py" />
       </list>
     </option>
   </component>
@@ -232,20 +283,20 @@
               <item name="SA2" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SA2" type="b2602c69:ProjectViewProjectNode" />
               <item name="SA2" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="rbac" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SA2" type="b2602c69:ProjectViewProjectNode" />
               <item name="SA2" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SA2" type="b2602c69:ProjectViewProjectNode" />
@@ -260,6 +311,21 @@
               <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="callback_plugins" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SA2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="SA2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Remote Python 3.6.3 (sftp://root@192.168.10.10:22/opt/pyenv/versions/SA2/bin/python3) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="SA2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Remote Python 3.6.3 (sftp://root@192.168.10.10:22/opt/pyenv/versions/SA2/bin/python3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="-1455830296" type="d76c9d6b:PyRemoteLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -269,24 +335,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/apps" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/apps/tasks" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\github\SA2\backend\apps" />
-      <recent name="D:\github\SA2\backend" />
-      <recent name="D:\github\SA2\backend\apps\utils" />
-      <recent name="D:\github\SA2\backend\apps\book" />
-      <recent name="D:\github\SA2\backend\apps\rbac" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\SA2\backend\apps\tasks" />
       <recent name="D:\github\SA2\backend\apps\utils" />
       <recent name="D:\github\SA2\backend\apps" />
       <recent name="D:\github\SA2\backend" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\SA2\backend\apps\tasks" />
+      <recent name="D:\github\SA2\backend\apps" />
+      <recent name="D:\github\SA2\backend\scripts" />
+      <recent name="D:\github\SA2\backend" />
+      <recent name="D:\github\SA2\backend\apps\utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -301,7 +373,117 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.backend">
+    <configuration name="ansibleApi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SA2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/apps/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/apps/utils/ansibleApi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ansibleApiTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SA2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/scripts/ansibleApiTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tasks" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SA2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/apps/cmdb" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/apps/cmdb/tasks.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SA2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/scripts/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testCelery" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SA2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/scripts/testCelery.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="backend" type="Python.DjangoServer" factoryName="Django server">
       <module name="SA2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -326,6 +508,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ansibleApiTest" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.tasks" />
+        <item itemvalue="Python.testCelery" />
+        <item itemvalue="Python.ansibleApi" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -342,7 +533,18 @@
       <workItem from="1591169047951" duration="1509000" />
       <workItem from="1591204761962" duration="62406000" />
       <workItem from="1591856221434" duration="25521000" />
-      <workItem from="1592060639421" duration="58007000" />
+      <workItem from="1592060639421" duration="62640000" />
+      <workItem from="1592396939136" duration="12592000" />
+      <workItem from="1592461873926" duration="22564000" />
+      <workItem from="1592551338091" duration="18744000" />
+      <workItem from="1592579677819" duration="9644000" />
+      <workItem from="1592590538308" duration="2270000" />
+      <workItem from="1592621345405" duration="44261000" />
+      <workItem from="1592889637641" duration="1962000" />
+      <workItem from="1592892793514" duration="723000" />
+      <workItem from="1592893520439" duration="1906000" />
+      <workItem from="1592895433532" duration="11289000" />
+      <workItem from="1592912495173" duration="2173000" />
     </task>
     <task id="LOCAL-00001" summary="login认证接口">
       <created>1591150426746</created>
@@ -407,13 +609,20 @@
       <option name="project" value="LOCAL" />
       <updated>1592316768052</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="项目管理页完成">
+      <created>1592330561398</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1592330561398</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199889000" />
+    <option name="totallyTimeSpent" value="332650000" />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -423,16 +632,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-188" width="1936" height="1096" extended-state="6" />
+    <frame x="-1928" y="-188" width="1936" height="1096" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24946696" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27985075" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@SA2" weight="0.3290735" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290735" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3088392" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.29392973" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24600638" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31629393" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290735" />
@@ -442,37 +651,38 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.31735888" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.3290735" />
+      <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.2630458" />
+      <window_info anchor="bottom" id="manage.py@SA2" order="14" weight="0.3290735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32995737" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24946696" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26545843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@SA2" order="0" weight="0.3290735" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3290735" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3088392" />
-      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.3226837" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.31735888" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
-      <window_info anchor="bottom" id="File Transfer" order="14" weight="0.3290735" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290735" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3258786" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.37912673" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3290735" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.31735888" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.26411074" />
+      <window_info anchor="bottom" id="manage.py@SA2" order="14" weight="0.3290735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32995737" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="Database" order="5" />
     </layout-to-restore>
@@ -488,7 +698,8 @@
     <MESSAGE value="角色管理功能页面完成" />
     <MESSAGE value="cmdb功能" />
     <MESSAGE value="服务器列表页完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="服务器列表页完成" />
+    <MESSAGE value="项目管理页完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目管理页完成" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -498,317 +709,326 @@
       </configuration>
     </watches-manager>
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SA2$testCelery.coverage" NAME="testCelery Coverage Results" MODIFIED="1592500447603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/scripts" />
+    <SUITE FILE_PATH="coverage/SA2$ansibleApi.coverage" NAME="ansibleApi Coverage Results" MODIFIED="1592496720144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/apps/utils" />
+    <SUITE FILE_PATH="coverage/SA2$test.coverage" NAME="test Coverage Results" MODIFIED="1592814758843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/scripts" />
+    <SUITE FILE_PATH="coverage/SA2$testModels.coverage" NAME="testModels Coverage Results" MODIFIED="1592492683706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/scripts" />
+    <SUITE FILE_PATH="coverage/SA2$ansibleApiTest.coverage" NAME="ansibleApiTest Coverage Results" MODIFIED="1592903840063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/scripts" />
+    <SUITE FILE_PATH="coverage/SA2$tasks.coverage" NAME="tasks Coverage Results" MODIFIED="1592569487852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/apps/cmdb" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/channels/http.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <caret line="398" column="6" selection-start-line="398" selection-start-column="6" selection-end-line="398" selection-end-column="6" />
+        <state relative-caret-position="382">
+          <caret line="251" selection-start-line="251" selection-end-line="251" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/models.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/-349739896/concurrent/futures/thread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="133" column="13" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="13" />
+        <state relative-caret-position="437">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/models.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/asgiref/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="73" column="7" selection-start-line="73" selection-end-line="77" selection-end-column="9" />
+        <state relative-caret-position="-3">
+          <caret line="324" column="12" lean-forward="true" selection-start-line="324" selection-start-column="12" selection-end-line="324" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/hashers.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/contrib/admin/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="605" selection-start-line="605" selection-end-line="605" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/views/decorators/cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/contrib/admin/sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/django_celery_results/backends/database.py" />
+    <entry file="file://$PROJECT_DIR$/backend/apps/django_celery_results/views.py" />
+    <entry file="file://$PROJECT_DIR$/backend/apps/django_celery_results/utils.py" />
+    <entry file="file://$PROJECT_DIR$/backend/apps/django_celery_results/urls.py" />
+    <entry file="file://$PROJECT_DIR$/backend/apps/django_celery_results/admin.py" />
+    <entry file="file://$PROJECT_DIR$/backend/apps/django_celery_results/models.py" />
+    <entry file="file://$PROJECT_DIR$/backend/apps/django_celery_results/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/backend/backend/asgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="64" column="17" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="17" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/throttling.py">
+    <entry file="file://$PROJECT_DIR$/backend/backend/routing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-915">
-          <caret line="105" column="16" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/api_views.py" />
-    <entry file="file://$PROJECT_DIR$/backend/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/book/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="308">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/router.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/utils/pagination.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/backend/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/celery/app/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="1229" column="8" selection-start-line="1229" selection-start-column="8" selection-end-line="1229" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/backend/celery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/celery/task/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/db/models/fields/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="1899" column="8" selection-start-line="1899" selection-start-column="8" selection-end-line="1899" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/router.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/utils/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/tools/logs/ansible_exec.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/tools/inventory">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/tools/hosts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/tools/callback_plugins/timer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-528" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/tools/ansible.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/tools/callback_plugins/redis2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/utils/ansibleApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="80" column="61" selection-start-line="80" selection-start-column="56" selection-end-line="80" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/backend/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/contrib/auth/base_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/django/contrib/auth/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="288" column="27" selection-start-line="288" selection-start-column="27" selection-end-line="288" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/router.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="75" column="38" lean-forward="true" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/rest_framework/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="107" selection-start-line="107" selection-end-line="116" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1187">
-          <caret line="204" column="12" lean-forward="true" selection-start-line="204" selection-start-column="12" selection-end-line="204" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/filter.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/filter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/tools/playbooks/roles/ome.omero_common/molecule/default/molecule.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/filter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="44" selection-start-line="44" selection-end-line="48" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="45" selection-start-line="45" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/router.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="68" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/-349739896/datetime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="1359" column="6" selection-start-line="1359" selection-start-column="6" selection-end-line="1359" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/rest_framework/mixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="15" selection-start-line="15" selection-end-line="20" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-1455830296/1024456016/rest_framework/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/rbac/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/routing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/scripts/add_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/backend/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/utils/ansibleApi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4158">
+          <caret line="204" column="21" lean-forward="true" selection-start-line="204" selection-start-column="21" selection-end-line="204" selection-end-column="21" />
+          <folding>
+            <element signature="e#2006#2793#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/scripts/ansibleApiTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/tools/ansible.cfg">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
-          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/tools/callback_plugins/redis2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1582">
+          <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="8" selection-start-line="17" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/views.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/scripts/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/consumers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps/cmdb/filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
-          <caret line="38" selection-start-line="38" selection-end-line="38" selection-end-column="47" />
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/models.py">
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        <state relative-caret-position="350">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/views.py">
+    <entry file="file://$PROJECT_DIR$/backend/apps/tasks/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps/project/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="488">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="32" />
         </state>
       </provider>
     </entry>

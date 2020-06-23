@@ -10,7 +10,7 @@ class server(models.Model):
     region = models.ForeignKey(ProjectRegion, on_delete=models.SET_NULL, blank=True, null=True, related_name='server_region', verbose_name="区域", help_text='区域')
     project = models.ForeignKey(Project, on_delete=models.SET_NULL, blank=True, null=True, related_name='server_project', verbose_name="项目", help_text='项目')
     area = models.ForeignKey(ProjectArea, on_delete=models.SET_NULL,blank=True, null=True, related_name='server_area',verbose_name="大区", help_text='所属大区')
-    role = models.ManyToManyField(ProjectRole, blank=True, null=True, related_name='server_role', verbose_name="功能", help_text='功能')
+    role = models.ManyToManyField(ProjectRole, blank=True, related_name='server_role', verbose_name="功能", help_text='功能')
     # role = models.ForeignKey(ProjectRole, on_delete=models.SET_NULL, related_name='server_role', verbose_name="功能", help_text='功能', default=1)
     hostname = models.CharField('主机名', max_length=200, help_text='主机名',blank=True)
     public_ip = models.GenericIPAddressField('外网IP', help_text='外网IP',blank=True, null=True)

@@ -27,10 +27,14 @@ router = routers.DefaultRouter()
 from rbac.router import rbacRouter
 from cmdb.router import cmdbRouter
 from project.router import projectRouter
+from tasks.router import tasksRouter
 
 router.registry.extend(rbacRouter.registry)
 router.registry.extend(cmdbRouter.registry)
 router.registry.extend(projectRouter.registry)
+router.registry.extend(tasksRouter.registry)
+
+
 
 urlpatterns = [
     path('', admin.site.urls),
@@ -39,4 +43,5 @@ urlpatterns = [
     path('api/', include((router.urls, 'rest_framework'), namespace='api')),
     path('api-auth', include("rest_framework.urls")),
     path('docs/', include_docs_urls("运维接口文档")),
+    path(r'mdeditor/', include('mdeditor.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

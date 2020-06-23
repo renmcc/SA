@@ -16,7 +16,7 @@ class ServerFilter(django_filters.rest_framework.FilterSet):
 
     class Meta:
         model = server
-        fields = ["region", 'project', 'area', 'update_time']
+        fields = ["region", 'project', 'area', 'role', 'update_time']
 
 
 class celerytaskresultFilter(django_filters.FilterSet):

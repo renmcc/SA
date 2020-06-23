@@ -7,6 +7,8 @@ from backend import celery_app as app
 from utils.ansibleApi import ANSRunner
 import datetime
 import time
+from .models import server
+import json
 
 
 
@@ -18,13 +20,15 @@ def flushCMDB(hosts='all'):
     tasks.append(dict(action=dict(module='setup')))
     obj = ANSRunner()
     obj.runner(rediskey, hosts, tasks)
-    return obj.get_result()
-
-@app.task
-def test():
-    res = []
-    for i in range(10):
-        res.append(i)
-        time.sleep(1)
-    return res
-
+    hostDatas = obj.get_result()['ok']
+    serversQuerysets = server.objects.all()
+    for serversQueryset in serversQuerysets:
+        hostdata = hostDatas.get(serversQueryset.private_ip)
+        if hostdata:
+            facts = hostdata['ansible_facts']
+            serversQueryset.hostname = facts['ansible_nodename']
+            serversQueryset.os = facts['ansible_os_family']
+            serversQueryset.cpu = '%s-%s' %(facts['ansible_processor_vcpus'], facts['ansible_processor'][2])
+            serversQueryset.memory = '%sMB' % facts['ansible_memtotal_mb']
+            serversQueryset.disk = facts['ansible_devices']['sda']['size']
+            serversQueryset.save()

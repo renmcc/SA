@@ -40,12 +40,12 @@
       <el-table-column label="项目" prop="projectInfo.name" sortable align="center" min-width="80px" class-name="small-padding fixed-width" />
       <el-table-column label="地区" prop="regionInfo.name" sortable min-width="100px" align="center" class-name="small-padding fixed-width" />
       <el-table-column label="大区" prop="areaInfo.name" sortable align="center" min-width="80px" class-name="small-padding fixed-width" />
-      <el-table-column label="角色" prop="roles" sortable align="center" min-width="270px" class-name="small-padding fixed-width" />
+      <el-table-column label="角色" prop="roles" sortable align="center" min-width="300px" class-name="small-padding fixed-width" />
       <el-table-column label="主机名" prop="hostname" sortable="custom" align="center" min-width="100px" class-name="small-padding fixed-width" />
       <el-table-column label="公网IP" prop="public_ip" sortable="custom" align="center" min-width="120px" class-name="small-padding fixed-width" />
       <el-table-column label="内网IP" prop="private_ip" sortable="custom" align="center" min-width="120px" class-name="small-padding fixed-width" />
       <el-table-column label="操作系统" prop="os" sortable="custom" align="center" min-width="100px" class-name="small-padding fixed-width" />
-      <el-table-column label="CPU" prop="cpu" sortable="custom" align="center" min-width="300px" class-name="small-padding fixed-width" />
+      <el-table-column label="CPU" prop="cpu" sortable="custom" align="center" min-width="350px" class-name="small-padding fixed-width" />
       <el-table-column label="内存" prop="memory" sortable="custom" align="center" min-width="80px" class-name="small-padding fixed-width" />
       <el-table-column label="硬盘" prop="disk" sortable="custom" align="center" min-width="80px" class-name="small-padding fixed-width" />
       <el-table-column label="状态" prop="status" sortable="custom" align="center" min-width="80px" class-name="small-padding fixed-width" :formatter="accountFormatter" />
@@ -149,6 +149,7 @@ export default {
         region: '',
         project: '',
         area: '',
+        role: [],
         name: '',
         search: '',
         datetimeValue: [],

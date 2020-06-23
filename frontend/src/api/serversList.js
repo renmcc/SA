@@ -10,8 +10,12 @@ export function getServersList(listQuery) {
     after_date = listQuery.datetimeValue[0]
     before_date = listQuery.datetimeValue[1]
   }
+  let urlStr = `/api/serverInfo/?search=${listQuery.search}&region=${listQuery.region}&project=${listQuery.project}&area=${listQuery.area}&update_time_after=${after_date}&update_time_before=${before_date}&ordering=${listQuery.order}${listQuery.prop}&page=${listQuery.page}&page_size=${listQuery.pageSize}`
+  listQuery.role.forEach(r => {
+    urlStr += `&role=${r}`
+  })
   return request({
-    url: `/api/serverInfo/?search=${listQuery.search}&region=${listQuery.region}&project=${listQuery.project}&area=${listQuery.area}&update_time_after=${after_date}&update_time_before=${before_date}&ordering=${listQuery.order}${listQuery.prop}&page=${listQuery.page}&page_size=${listQuery.pageSize}`,
+    url: urlStr,
     method: 'get'
   })
 }

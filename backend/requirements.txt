@@ -16,3 +16,9 @@ markdown==3.2.1
 pillow==7.1.2
 simpleui
 coreapi
+channels
+channels_redis
+flower
+django-mdeditor
+markdown
+Pygments

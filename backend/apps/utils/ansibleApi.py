@@ -79,7 +79,7 @@ class ANSRunner(object):
     def __init__(self, *args, **kwargs):
         self.callback = ResultCallback()
         self.resource = '/data/github/SA2/backend/tools/hosts'
-        self.redisobj = redis.Redis(host='127.0.0.1', port=6379, password='', db=10)
+        self.redisobj = redis.Redis(host='127.0.0.1', port=6379, password='', db=2)
         self.__initializeData()
 
     def _write_to_save(self, rediskey, data):  # 写入 redis
@@ -167,7 +167,9 @@ class ANSRunner(object):
             shutil.rmtree(C.DEFAULT_LOCAL_TMP, True)
 
         # 写入redis
-        self._write_to_save(rediskey, self.get_result())
+        for task in tasks:
+            if task['action']['module'] != 'setup':
+                self._write_to_save(rediskey, self.get_result())
 
     def get_result(self):
         self.results_raw = {'ok':{},'skipped':{}, 'failed':{},'unreachable':{},"status":{}}

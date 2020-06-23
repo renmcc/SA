@@ -143,7 +143,23 @@ export const asyncRoutes = [
         path: '/cmdb/servers',
         name: 'ServersList',
         component: () => import('@/views/cmdb/serverslist'),
-        meta: { title: '服务器列表', icon: 'user', roles: ['运维组'], noCache: true }
+        meta: { title: '服务器列表', icon: 'user', roles: ['运维组'], noCache: false }
+      }
+    ]
+  },
+  {
+    path: '/tasks',
+    name: 'tasks',
+    component: Layout,
+    redirect: 'noRedirect',
+    alwaysShow: true,
+    meta: { title: '任务管理', icon: 'documentation', roles: ['运维组'] },
+    children: [
+      {
+        path: '/tasks/updateServersDatetime',
+        name: 'UpdateServersDatetime',
+        component: () => import('@/views/tasks/updateServersDatetime'),
+        meta: { title: '更新服务器时间', icon: 'user', roles: ['运维组'], noCache: true }
       }
     ]
   },

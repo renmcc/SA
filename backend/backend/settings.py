@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import sys
 import datetime
+from django.utils.translation import ugettext_lazy
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
@@ -46,14 +47,19 @@ INSTALLED_APPS = [
     'import_export',
     'django_celery_results',
     'django_celery_beat',
+    'channels',
+    'mdeditor',
+    'tinymce',
     'rbac.apps.RbacConfig',
     'cmdb.apps.CmdbConfig',
-    'project.apps.ProjectConfig'
+    'project.apps.ProjectConfig',
+    'tasks.apps.TasksConfig'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware', # 国际化
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -70,6 +76,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.i18n',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -139,6 +146,16 @@ USE_L10N = True
 
 USE_TZ = False
 
+LANGUAGES = (
+   ('en', 'English'),
+   ('zh-hans', '中文简体'),
+)
+
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
 AUTH_USER_MODEL = 'rbac.UserProfile'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -197,7 +214,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_THROTTLE_RATES': {
         'anon': '5/minute',
-        'user': '5/second'
+        'user': '10/second'
     }
 
 }
@@ -214,18 +231,66 @@ REST_FRAMEWORK_EXTENSIONS = {
     'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 5
 }
 
-# # 使用REDIS做为消息队列
-# CELERY_BROKER_URL = 'redis://192.168.10.10:6379/8'
-# # CELERY_RESULT_BACKEND = 'redis://localhost:6379/9'
-# CELERY_RESULT_BACKEND = 'django-db'
-# # 结果序列化方案
-# CELERY_RESULT_SERIALIZER = 'json'
-#
-# # 非常重要,有些情况下可以防止死锁
-# CELERYD_FORCE_EXECV = True
-#
-# # 每个worker最大执行任务数
-# CELERYD_MAX_TASKS_PER_CHILD = 100
+# 指定ASGI的路由地址
+ASGI_APPLICATION = 'backend.routing.application'
+
+# 异步任务
+# 使用REDIS做为消息队列
+CELERY_BROKER_URL = 'redis://localhost:6379/1'
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379/2'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+# celery worker并发数
+CELERYD_CONCURRENCY = 20
+
+# 非常重要,有些情况下可以防止死锁
+CELERYD_FORCE_EXECV = True
+
+# 每个worker最大执行任务数
+CELERYD_MAX_TASKS_PER_CHILD = 100
+
+CELERY_TIMEZONE = 'Asia/Shanghai'
+CELERY_ENABLE_UTC = False
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": ["redis://127.0.0.1:6379/3"],
+        },
+    },
+}
+
+MDEDITOR_CONFIGS = {
+    'default':{
+        'width': '90% ',  # Custom edit box width  宽度，整个页面的百分之多少
+        'heigth': 500,  # Custom edit box height   高度，单位为px
+        'toolbar': ["undo", "redo", "|",
+                    "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|",
+                    "h1", "h2", "h3", "h5", "h6", "|",
+                    "list-ul", "list-ol", "hr", "|",
+                    "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime"
+                    "emoji", "html-entities", "pagebreak", "goto-line", "|",
+                    "help", "info",
+                    "||", "preview", "watch", "fullscreen"],  # custom edit box toolbar   工具栏
+        'upload_image_formats': ["jpg", "jpeg", "gif", "png", "bmp", "webp"],  # image upload format type  允许上传的图片 的格式，不在这个里面的格式将不允许被上传
+        'image_floder': 'editor',  # image save the folder name   上传图片后存放的目录，BASE_DIR/MEDIA_ROOT/editor
+        'theme': 'default',  # edit box theme, dark / default  mdeditor主题，dark/default两种
+        'preview_theme': 'default',  # Preview area theme, dark / default  内容显示区主题 dark/default
+        'editor_theme': 'default',  # edit area theme, pastel-on-dark / default   文本编辑区主题  pastel-on-dark / default
+        'toolbar_autofixed': True,  # Whether the toolbar capitals
+        'search_replace': True,  # Whether to open the search for replacement  是否打开搜索替换
+        'emoji': True,  # whether to open the expression function  是否允许使用emoji表情
+        'tex': True,  # whether to open the tex chart function   是否打开tex图表功能
+        'flow_chart': True,  # whether to open the flow chart function   是否打开流程图功能
+        'sequence': True  # Whether to open the sequence diagram function   是否打开序列图函数
+    }
+}
+
 
 # simpleui 设置
 # 首页配置
