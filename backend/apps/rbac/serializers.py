@@ -9,16 +9,45 @@ from django.contrib.auth.models import Permission
 from . import models
 
 
-
-class userAuthSerializer(serializers.Serializer):
-    username = serializers.CharField(max_length=10, write_only=True,
-                                     error_messages={
-                                         'max_length': '用户名不能超过10个字符',
-                                     })
+class UserAuthSerializer(serializers.ModelSerializer):
     password = serializers.CharField(max_length=20, style={'input_type': 'password'}, write_only=True,
                                     error_messages={
                                         'max_length': '密码不能超过20个字符',
                                     })
+
+    class Meta:
+        model = models.UserAuth
+        fields = ['id',  'username', 'password',  'token', 'add_time', 'update_time']
+        extra_kwargs = {
+            'username': {
+                'required': True,
+                'write_only': True,
+                'error_messages': {
+                    'max_length': '用户名不能超过10个字符',
+                }
+            },
+            'token': {
+                 'read_only': True,
+            },
+            'update_time': {
+                'read_only': True,
+                'format': '%Y-%m-%d %H:%M:%S'
+            },
+            'add_time': {
+                'read_only': True,
+                'format': '%Y-%m-%d %H:%M:%S'
+            },
+        }
+
+# class userAuthSerializer(serializers.Serializer):
+#     username = serializers.CharField(max_length=10, write_only=True,
+#                                      error_messages={
+#                                          'max_length': '用户名不能超过10个字符',
+#                                      })
+#     password = serializers.CharField(max_length=20, style={'input_type': 'password'}, write_only=True,
+#                                     error_messages={
+#                                         'max_length': '密码不能超过20个字符',
+#                                     })
 
 
 class UserInfoSerializer(serializers.ModelSerializer):

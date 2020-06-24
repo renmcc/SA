@@ -18,13 +18,14 @@ class updateSystemDateView(viewsets.ModelViewSet):
     filter_fields = ['user']
 
     def create(self, request, *args, **kwargs):
-        channelName = str(request.data['channelName'])
-        servers = str(request.data['servers'])
-        datetime = str(request.data['datetime'])
-        resultObj = tasks.updateServerDatetime.delay(channelName, servers, datetime)
-        request.data['taskId'] = resultObj.task_id
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
+        channelName = serializer.initial_data.get('channelName')
+        servers = serializer.initial_data.get('servers')
+        datetime = serializer.initial_data.get('datetime')
+        resultObj = tasks.updateServerDatetime.delay(channelName, servers, datetime)
+        serializer.validated_data['taskId'] = resultObj.task_id
+        serializer.validated_data['user'] = request.user.username
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
         return Response({'taskid': resultObj.task_id}, status=status.HTTP_201_CREATED, headers=headers)

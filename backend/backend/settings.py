@@ -160,13 +160,14 @@ AUTH_USER_MODEL = 'rbac.UserProfile'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/backendstatic/'
+STATIC_ROOT = os.path.join(BASE_DIR, "backendstatic")
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 REST_FRAMEWORK = {
-    # docs用
+    # docs用STATIC_ROOT
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     # 全局解析类配置    url拼接参数，数据包参数：form-data,urlencoding,json
     'DEFAULT_PARSER_CLASSES': [

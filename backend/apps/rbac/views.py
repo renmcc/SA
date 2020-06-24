@@ -20,26 +20,55 @@ from . import filter
 import time
 
 
-class UserAuthView(SaViewSet):
+# class UserAuthView(SaViewSet):
+#     """
+#     用户认证获取token
+#     """
+#     permission_classes = ()
+#     authentication_classes = ()
+#     serializer_class = serializers.userAuthSerializer
+#
+#     def create(self, request, *args, **kwargs):
+#         serializer = self.get_serializer(data=request.data)
+#
+#         serializer.is_valid(raise_exception=True)
+#         username = serializer.initial_data.get('username')
+#         password = serializer.initial_data.get('password')
+#         user = authenticate(username=username, password=password)
+#         if user:
+#             payload = jwt_payload_handler(user)
+#             return SaResponse({'token': jwt_encode_handler(payload)}, status=status.HTTP_200_OK)
+#         else:
+#             return SaResponse('用户认证失败', status=status.HTTP_400_BAD_REQUEST)
+
+
+class UserAuthView(mixins.CreateModelMixin, viewsets.GenericViewSet):
     """
     用户认证获取token
     """
     permission_classes = ()
     authentication_classes = ()
-    serializer_class = serializers.userAuthSerializer
+    queryset = models.UserAuth.objects.all()
+    serializer_class = serializers.UserAuthSerializer
 
     def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-
+        serializer = self.get_serializer(data=request.data.copy())
         serializer.is_valid(raise_exception=True)
         username = serializer.initial_data.get('username')
         password = serializer.initial_data.get('password')
+        serializer.validated_data.pop('password')
         user = authenticate(username=username, password=password)
+        serializer.validated_data['remote_addr'] = request.stream.META['REMOTE_ADDR']
+        serializer.validated_data['remote_agent'] = request.stream.META['HTTP_USER_AGENT']
         if user:
             payload = jwt_payload_handler(user)
+            serializer.validated_data['token'] = jwt_encode_handler(payload)
+            serializer.validated_data['status'] = '认证成功'
+            self.perform_create(serializer)
             return SaResponse({'token': jwt_encode_handler(payload)}, status=status.HTTP_200_OK)
-        else:
-            return SaResponse('用户认证失败', status=status.HTTP_400_BAD_REQUEST)
+        serializer.validated_data['status'] = '认证失败'
+        self.perform_create(serializer)
+        return SaResponse('用户认证失败', status=status.HTTP_400_BAD_REQUEST)
 
 
 class UserInfoView(viewsets.ModelViewSet):

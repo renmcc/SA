@@ -37,7 +37,7 @@ router.registry.extend(tasksRouter.registry)
 
 
 urlpatterns = [
-    path('', admin.site.urls),
+    path('admin/', admin.site.urls),
     # # jwt token
     # path('api-jwt-auth/', obtain_jwt_token),
     path('api/', include((router.urls, 'rest_framework'), namespace='api')),

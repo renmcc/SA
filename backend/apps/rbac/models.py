@@ -6,6 +6,22 @@ import time
 # Create your models here.
 
 
+class UserAuth(models.Model):
+    """登录日志"""
+    username = models.CharField(max_length=200, verbose_name="账号", help_text='账号')
+    remote_addr = models.CharField(max_length=50, default='', verbose_name="客户端地址", help_text='客户端地址')
+    status = models.CharField(max_length=20, verbose_name='认证状态', help_text='认证状态')
+    remote_agent = models.TextField(default='', verbose_name="客户端信息", help_text='客户端信息')
+    token = models.TextField(default='', verbose_name='Token', help_text='Token')
+    add_time = models.DateTimeField(auto_now_add=True, help_text='登录时间', verbose_name="登录时间")
+    update_time = models.DateTimeField(auto_now=True, help_text='更新时间', verbose_name='更新时间')
+
+    class Meta:
+        verbose_name = "登录日志"
+        verbose_name_plural = verbose_name
+        ordering = ['id']
+
+
 class GroupProfile(Group):
     add_time = models.DateTimeField(default=datetime.now, verbose_name="创建时间")
     update_time = models.DateTimeField('更新时间', auto_now=True, help_text='更新时间')

@@ -20,10 +20,10 @@ class updateSystemDateSerializer(serializers.ModelSerializer):
                 'required': False,
             },
             'taskId': {
-                'required': False,
+                'read_only': True,
             },
             'user': {
-                'required': False,
+                'read_only': True,
             },
             'update_time': {
                 'read_only': True,
@@ -34,7 +34,3 @@ class updateSystemDateSerializer(serializers.ModelSerializer):
                 'format': '%Y-%m-%d %H:%M:%S'
             },
         }
-
-    def validate(self, attrs):
-        attrs['user'] = self.context['request'].user.name
-        return attrs

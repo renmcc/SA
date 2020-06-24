@@ -12,6 +12,22 @@ admin.site.site_title = 'SA后台管理'
 admin.site.site_header = 'SA运维管理后台'
 
 
+@admin.register(models.UserAuth)
+class GroupProfileAdmin(ImportExportModelAdmin, ImportExportActionModelAdmin):
+    list_display =  ['id', 'username', 'status', 'remote_addr', 'remote_agent', 'add_time']
+    # 排序方式 -为倒序
+    ordering = ['-id']
+    # 为数据列表页的字段id和job设置路由地址，该路由地址可进入数据修改页
+    list_display_links = ['id', 'username']
+    # 设置过滤器，若有外键，则应该使用双下划线连接两个模型的字段
+    list_filter = ['add_time']
+    # 在数据列表页设置每一页显示的数据
+    list_per_page = 10
+    # 数据列表页每一页显示最大数
+    list_max_show_all = 200
+    # 设置可搜索的字段
+    search_fields = ['remote_addr', 'username']
+
 @admin.register(models.UserProfile)
 class UserProfileAdmin(UserAdmin):
     list_display =  ['id', 'username', 'name', 'mobile', 'email', 'avatar', 'position', 'is_staff', 'is_active',  'date_joined']

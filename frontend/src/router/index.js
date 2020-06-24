@@ -159,7 +159,7 @@ export const asyncRoutes = [
         path: '/tasks/updateServersDatetime',
         name: 'UpdateServersDatetime',
         component: () => import('@/views/tasks/updateServersDatetime'),
-        meta: { title: '更新服务器时间', icon: 'user', roles: ['运维组'], noCache: true }
+        meta: { title: '调整服务器时间', icon: 'user', roles: ['运维组'], noCache: true }
       }
     ]
   },

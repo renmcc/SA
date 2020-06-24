@@ -216,7 +216,7 @@ export default {
       data.channelName = this.channelName
       return data
     },
-    ...mapGetters({ currentUser: 'name' })
+    ...mapGetters({ currentUser: 'username' })
   },
   watch: {
     listQuery: {
