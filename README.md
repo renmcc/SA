@@ -26,4 +26,11 @@
 - [x] 基于RBAC的用户权限管理
 
 ## 项目截图
-在线项目未完成，截几张图
+![1.png](https://github.com/renmcc/SA2/blob/master/screenshot/login.png)
+![2.png](https://github.com/renmcc/SA2/blob/master/screenshot/personcenter.png)
+![3.png](https://github.com/renmcc/SA2/blob/master/screenshot/project.png)
+![4.png](https://github.com/renmcc/SA2/blob/master/screenshot/cmdb.png)
+![5.png](https://github.com/renmcc/SA2/blob/master/screenshot/tasks.png)
+![6.png](https://github.com/renmcc/SA2/blob/master/screenshot/taskdialog.png)
+![7.png](https://github.com/renmcc/SA2/blob/master/screenshot/userinfo.png)
+![8.png](https://github.com/renmcc/SA2/blob/master/screenshot/djangoadmin.png)
