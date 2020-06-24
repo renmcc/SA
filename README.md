@@ -23,7 +23,7 @@
 - [x] 基于项目的资产主机分配
 - [x] 基于ansible资产信息扫描更新
 - [x] 基于项目的异步任务调度
-- [x] 基于RBAC的用户权限管理
+
 
 ## 项目截图
 ![1.png](https://github.com/renmcc/SA2/blob/master/screenshot/login.png)
