@@ -20,5 +20,4 @@ channels
 channels_redis
 flower
 django-mdeditor
-markdown
 Pygments
