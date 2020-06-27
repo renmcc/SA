@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'django_celery_beat',
     'channels',
     'mdeditor',
-    'tinymce',
     'rbac.apps.RbacConfig',
     'cmdb.apps.CmdbConfig',
     'project.apps.ProjectConfig',
