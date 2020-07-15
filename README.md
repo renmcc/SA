@@ -14,8 +14,14 @@
 * 任务调度基于celery框架异步执行
 * 消息推送基于websocket技术栈
 
-## 在线体验
-* 待完成
+## 快速体验
+```sh
+git clone https://github.com/renmcc/Dockerfile.git
+cd Dockerfile
+docker-compose up -d
+用户名：admin
+密码：admin
+```
 
 ## 开发进度
 * 已完成
